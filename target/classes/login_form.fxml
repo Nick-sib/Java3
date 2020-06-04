@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="main-window" fx:id="mainLayout" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+
+    <VBox fx:id="panelMessages" VBox.vgrow="ALWAYS">
+
+        <HBox maxHeight="Infinity" maxWidth="Infinity" minWidth="300" VBox.vgrow="ALWAYS">
+
+            <ListView fx:id="listMessages" maxWidth="Infinity" minWidth="200" HBox.hgrow="ALWAYS" />
+            <ListView fx:id="usersOnLine" maxWidth="300" minWidth="100" HBox.hgrow="ALWAYS" />
+        </HBox>
+            <HBox id="bottom-box" spacing="5.0">
+
+                <TextField fx:id="txtMessageInput" promptText="Введите сообщение" HBox.hgrow="ALWAYS" />
+
+                <Button fx:id="bttnSendMessage" text="Отправить" />
+            </HBox>
+
+    </VBox>
+
+    <VBox fx:id="panelLogin" minHeight="380" minWidth="380">
+      <Pane prefHeight="30.0" prefWidth="496.0" />
+        <HBox prefHeight="68.0" prefWidth="496.0">
+         <Pane prefHeight="86.0" prefWidth="83.0" />
+         <VBox prefHeight="200.0" prefWidth="63.0" spacing="10">
+            <children>
+                  <Label prefHeight="27.0" prefWidth="30.0" text="Login" />
+                  <Label alignment="BOTTOM_LEFT" text="Password" />
+            </children>
+         </VBox>
+         <VBox prefHeight="65.0" prefWidth="200.0" spacing="10">
+            <children>
+                  <TextField fx:id="txtLogin" prefHeight="25.0" prefWidth="130.0" />
+                  <PasswordField fx:id="txtPassword" />
+            </children>
+         </VBox>
+
+        </HBox>
+        <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="54.0" prefWidth="496.0" spacing="10">
+         <Pane prefHeight="54.0" prefWidth="140.0" />
+            <Button fx:id="bttnCancel" text="Cancel" textAlignment="CENTER"/>
+            <Button id="login" fx:id="bttnLogIn" text="Log In" />
+            <Button id="signup" fx:id="bttnSignUp" text="Sign Up" />
+        </HBox>
+
+    </VBox>
+
+
+    <stylesheets>
+        <URL value="@css/styles.css" />
+    </stylesheets>
+
+</VBox>
